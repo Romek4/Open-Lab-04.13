@@ -20,8 +20,11 @@ namespace Open_Lab_04._13
                             longestCommonSequence = substringToFind;
                         }
                     }
+                    else
+                    {
+                        break;
+                    }
                 }
-                
             }
 
             return longestCommonSequence;
