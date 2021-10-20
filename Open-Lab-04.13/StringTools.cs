@@ -8,11 +8,12 @@ namespace Open_Lab_04._13
         {
             string longestCommonSequence = "";
 
-            for (int i = 0; i < str1.Length; i++)
+            for (int substringStartIndex = 0; substringStartIndex < str1.Length; substringStartIndex++)
             {
-                for (int j = 1; j < str1.Length - i; j++)
+                var maxPossibleLengthOfSubstring = str1.Length - substringStartIndex;
+                for (int lengthOfSubstring = 1; lengthOfSubstring < maxPossibleLengthOfSubstring; lengthOfSubstring++)
                 {
-                    var substringToFind = str1.Substring(i, j);
+                    var substringToFind = str1.Substring(substringStartIndex, lengthOfSubstring);
                     if (str2.Contains(substringToFind))
                     {
                         if (substringToFind.Length > longestCommonSequence.Length)
