@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Open_Lab_04._13
+﻿namespace Open_Lab_04._13
 {
     public class StringTools
     {
@@ -23,7 +21,7 @@ namespace Open_Lab_04._13
                     }
                     else
                     {
-                        break;
+                        break; // do not continue in the second 'for' as there will not be any longer common substring found
                     }
                 }
             }
